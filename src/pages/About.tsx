@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { Award, Users, Clock, Heart, Target, Shield, TrendingUp } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { team } from '../data/team';
 
 const values = [
   {
@@ -9,7 +10,7 @@ const values = [
     description: 'Every treatment plan is designed around your unique needs, health history, and wellness goals.',
   },
   {
-    icon: Target,
+    iconImage: '/About icons/Results-Driven Approach.png',
     title: 'Results-Driven Approach',
     description: 'We focus on measurable outcomes and visible improvements in your health and well-being.',
   },
@@ -24,7 +25,7 @@ const values = [
     description: 'Our panel of international medical professionals brings decades of combined experience.',
   },
   {
-    icon: Users,
+    iconImage: '/About icons/Holistic Wellness.png',
     title: 'Holistic Wellness',
     description: 'We treat the whole person—body, mind, and lifestyle—not just isolated symptoms.',
   },
@@ -35,33 +36,6 @@ const values = [
   },
 ];
 
-const team = [
-  {
-    name: 'Dr. Elena Voss',
-    role: 'Lead Therapist & Medical Director',
-    image: '/hero-services.jpg',
-    bio: 'Board-certified in integrative medicine with 15+ years of experience in hormone therapy and wellness treatments.',
-  },
-  {
-    name: 'Dr. Samira Okafor',
-    role: 'Clinical Director',
-    image: '/hero-hormone.jpg',
-    bio: 'Specializes in digestive health and anti-aging therapies. Leading researcher in probiotic treatments.',
-  },
-  {
-    name: 'Dr. Dmitri Luo',
-    role: 'Movement & Recovery Specialist',
-    image: '/hero-men-up.jpg',
-    bio: 'Expert in cardiovascular rehabilitation and sports medicine. Pioneer in non-invasive angiotherapy techniques.',
-  },
-  {
-    name: 'Dr. Patricia Chen',
-    role: 'Women\'s Health Specialist',
-    image: '/hero-menopause.jpg',
-    bio: 'Dedicated to menopause management and women\'s vitality programs. Board-certified gynecologist.',
-  },
-];
-
 export default function About() {
   return (
     <div className="min-h-screen">
@@ -69,8 +43,8 @@ export default function About() {
       <section className="relative py-32 overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/hero-about.jpg"
-            alt="Montis Wellness Team"
+            src="/hero-about.png"
+            alt="Montis Specialist Center Team"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-transparent" />
@@ -87,7 +61,7 @@ export default function About() {
               About Us
             </span>
             <h1 className="text-5xl md:text-6xl font-bold text-white mt-4 mb-6">
-              Montis <span style={{ color: '#CDB06A' }}>Wellness</span>
+              Montis <span style={{ color: '#CDB06A' }}>Specialist Center</span>
             </h1>
             <p className="text-xl text-gray-200 leading-relaxed">
               A modern therapy and aesthetics studio built on clarity, comfort, and consistency. We blend hands-on care with thoughtful technology.
@@ -110,7 +84,7 @@ export default function About() {
                 Our <span style={{ color: '#007A59' }}>Mission</span>
               </h2>
               <p className="text-gray-600 text-lg leading-relaxed mb-6">
-                At Montis Wellness, we believe that optimal health is not just the absence of disease, but a state of complete physical, mental, and social well-being. Our mission is to empower individuals to take control of their health through personalized, science-backed wellness solutions.
+                At Montis Specialist Center, we believe that optimal health is not just the absence of disease, but a state of complete physical, mental, and social well-being. Our mission is to empower individuals to take control of their health through personalized, science-backed wellness solutions.
               </p>
               <p className="text-gray-600 text-lg leading-relaxed mb-6">
                 Founded by a team of international medical professionals, we combine cutting-edge diagnostic technology with time-tested therapeutic approaches to deliver results that matter. From hormone balance to cardiovascular health, digestive wellness to anti-aging—every program is designed with your unique biology in mind.
@@ -135,8 +109,8 @@ export default function About() {
               className="relative"
             >
               <img
-                src="/hero-home.jpg"
-                alt="Montis Wellness Interior"
+                src="/hero-home.png"
+                alt="Montis Specialist Center Interior"
                 className="rounded-3xl shadow-2xl w-full"
               />
             </motion.div>
@@ -269,10 +243,14 @@ export default function About() {
                 className="bg-white rounded-2xl p-8 hover:shadow-lg transition-shadow"
               >
                 <div
-                  className="w-14 h-14 rounded-xl flex items-center justify-center mb-5"
+                  className="w-20 h-20 rounded-2xl flex items-center justify-center mb-6 overflow-hidden"
                   style={{ backgroundColor: 'rgba(0, 122, 89, 0.1)' }}
                 >
-                  <value.icon className="w-7 h-7" style={{ color: '#007A59' }} />
+                  {'iconImage' in value ? (
+                    <img src={value.iconImage} alt={value.title} className="w-full h-full object-cover" />
+                  ) : (
+                    <value.icon className="w-10 h-10" style={{ color: '#007A59' }} />
+                  )}
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">{value.title}</h3>
                 <p className="text-gray-500 leading-relaxed">{value.description}</p>

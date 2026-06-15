@@ -9,12 +9,14 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}
           <div className="space-y-6">
-            <Link to="/" className="flex items-center gap-2">
-              <span className="text-2xl font-bold tracking-tight" style={{ color: '#CDB06A' }}>
-                Montis
-              </span>
-              <span className="text-2xl font-light tracking-tight text-white">
-                Wellness
+            <Link to="/" className="flex items-center gap-3">
+              <img
+                src="/logo.png"
+                alt="Montis Specialist Center"
+                className="h-16 w-auto object-contain"
+              />
+              <span className="text-xl font-semibold tracking-tight text-white">
+                Montis Specialist Center
               </span>
             </Link>
             <p className="text-gray-400 text-sm leading-relaxed">
@@ -103,7 +105,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="mt-12 pt-8 border-t border-gray-800 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-gray-500 text-sm">
-            © {new Date().getFullYear()} Montis Wellness. All rights reserved.
+            © {new Date().getFullYear()} Montis Specialist Center. All rights reserved.
           </p>
           <div className="flex items-center gap-2 text-gray-500 text-sm">
             <Heart className="w-4 h-4 text-[#CDB06A]" />

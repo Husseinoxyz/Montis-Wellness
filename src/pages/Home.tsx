@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowRight, Play, Star, ChevronRight } from 'lucide-react';
 import { services, testimonials } from '../data/services';
+import { team } from '../data/team';
 
 export default function Home() {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
@@ -152,12 +153,11 @@ export default function Home() {
                   to={`/services/${service.id}`}
                   className="group block bg-white rounded-2xl border border-gray-100 p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
                 >
-                  <div
-                    className="w-14 h-14 rounded-xl flex items-center justify-center mb-5 transition-colors group-hover:scale-110"
-                    style={{ backgroundColor: 'rgba(0, 122, 89, 0.1)' }}
-                  >
-                    <service.icon className="w-7 h-7" style={{ color: '#007A59' }} />
-                  </div>
+                  <img
+                    src={service.iconImage}
+                    alt={service.title}
+                    className="w-40 h-40 object-contain mb-5 transition-transform duration-300 group-hover:scale-110"
+                  />
                   <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-[#007A59] transition-colors">
                     {service.title}
                   </h3>
@@ -204,7 +204,7 @@ export default function Home() {
                 <span style={{ color: '#007A59' }}>Science</span>
               </h2>
               <p className="text-gray-600 text-lg leading-relaxed mb-8">
-                Montis Wellness is a modern therapy and aesthetics studio built on clarity, comfort, and consistency. We blend hands-on care with thoughtful technology to deliver results you can see and feel.
+                Montis Specialist Center is a modern therapy and aesthetics studio built on clarity, comfort, and consistency. We blend hands-on care with thoughtful technology to deliver results you can see and feel.
               </p>
 
               <div className="space-y-6">
@@ -235,8 +235,8 @@ export default function Home() {
               className="relative"
             >
               <img
-                src="/hero-about.jpg"
-                alt="Montis Wellness Team"
+                src="/hero-about.png"
+                alt="Montis Specialist Center Team"
                 className="rounded-3xl shadow-2xl w-full"
               />
               <div className="absolute -bottom-6 -left-6 bg-white rounded-2xl p-6 shadow-xl">
@@ -324,11 +324,72 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Feature Image */}
+      <section className="relative h-[320px] md:h-[480px] overflow-hidden">
+        <motion.img
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          src="/5 D hero.png"
+          alt="Montis Specialist Center 5D model"
+          className="w-full h-full object-cover"
+        />
+      </section>
+
+      {/* Team */}
+      <section className="py-24" style={{ backgroundColor: '#F6F6F2' }}>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+          >
+            <span className="text-sm font-medium tracking-wider uppercase" style={{ color: '#CDB06A' }}>
+              Our Experts
+            </span>
+            <h2 className="text-4xl md:text-5xl font-bold mt-3 mb-6 text-gray-900">
+              Meet the <span style={{ color: '#007A59' }}>Team</span>
+            </h2>
+            <p className="text-gray-600 max-w-2xl mx-auto text-lg">
+              Our panel of international medical professionals brings decades of combined experience in wellness and preventive medicine.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {team.map((member, index) => (
+              <motion.div
+                key={member.name}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="group"
+              >
+                <div className="relative overflow-hidden rounded-2xl mb-4">
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900">{member.name}</h3>
+                <p className="text-sm font-medium mt-1" style={{ color: '#007A59' }}>{member.role}</p>
+                <p className="text-gray-500 text-sm mt-2">{member.bio}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-24 relative overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/hero-services.jpg"
+            src="/hero-services.png"
             alt="Wellness Background"
             className="w-full h-full object-cover"
           />

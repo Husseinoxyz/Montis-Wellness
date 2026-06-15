@@ -5,6 +5,7 @@ export interface Service {
   title: string;
   subtitle: string;
   icon: React.ElementType;
+  iconImage: string;
   heroImage: string;
   description: string;
   content: React.ReactNode;
@@ -16,7 +17,8 @@ export const services: Service[] = [
     title: 'Heart via Angiotherapy',
     subtitle: 'Non-invasive heart recovery and cardiovascular wellness',
     icon: Heart,
-    heroImage: '/hero-heart.jpg',
+    iconImage: '/service icons/Heart via Angiotherapy.png',
+    heroImage: '/hero-heart.png',
     description: 'Advanced non-invasive angiotherapy treatment for chronic angina, heart disease recovery, and COQ10 therapy.',
     content: (
       <div className="space-y-8">
@@ -127,7 +129,8 @@ export const services: Service[] = [
     title: 'Hormone Systemic Therapy',
     subtitle: 'Comprehensive hormone balance and replacement therapy',
     icon: FlaskConical,
-    heroImage: '/hero-hormone.jpg',
+    iconImage: '/service icons/Hormone Systemic Therapy.png',
+    heroImage: '/hero-hormone.png',
     description: 'Expert hormone screening, profiling, and Bioidentical Hormone Replacement Therapy (BHRT) for men and women.',
     content: (
       <div className="space-y-8">
@@ -253,7 +256,8 @@ export const services: Service[] = [
     title: 'Inflammation & Root Cause',
     subtitle: 'Identify and manage chronic inflammation at its source',
     icon: Flame,
-    heroImage: '/hero-inflammation.jpg',
+    iconImage: '/service icons/Inflammation & Root Cause.png',
+    heroImage: '/hero-inflammation.png',
     description: 'Comprehensive inflammation screening and management therapies including antioxidant therapy, oxygen therapy, and colon hydrotherapy.',
     content: (
       <div className="space-y-8">
@@ -370,7 +374,8 @@ export const services: Service[] = [
     title: 'Men Up Program',
     subtitle: 'Comprehensive men vitality and wellness program',
     icon: User,
-    heroImage: '/hero-men-up.jpg',
+    iconImage: '/service icons/Men Up Program.png',
+    heroImage: '/hero-men-up.png',
     description: 'Specialized men vitality program addressing erectile dysfunction, hormone imbalance, and sexual health through natural and therapeutic approaches.',
     content: (
       <div className="space-y-8">
@@ -480,7 +485,8 @@ export const services: Service[] = [
     title: 'Menopause & Perimenopause',
     subtitle: 'Specialized care for women transitioning through menopause',
     icon: UserCog,
-    heroImage: '/hero-menopause.jpg',
+    iconImage: '/service icons/Menopause & Perimenopause.png',
+    heroImage: '/hero-menopause.png',
     description: 'Comprehensive menopause and perimenopause management including hormone replacement therapy, cellular therapy, and symptom relief.',
     content: (
       <div className="space-y-8">
@@ -565,7 +571,8 @@ export const services: Service[] = [
     title: 'Montis Digestive Health',
     subtitle: 'Comprehensive gut health and digestive wellness solutions',
     icon: Apple,
-    heroImage: '/hero-digestive.jpg',
+    iconImage: '/service icons/Montis Digestive Health.png',
+    heroImage: '/hero-digestive.png',
     description: 'Advanced digestive disease screening, colon hydrotherapy, detox programs, and our patented Gut+ Probiotic formulation.',
     content: (
       <div className="space-y-8">
@@ -657,7 +664,8 @@ export const services: Service[] = [
     title: 'Revitalization & Healthy Aging',
     subtitle: 'Anti-aging therapies and revitalization programs',
     icon: Sparkles,
-    heroImage: '/hero-revitalization.jpg',
+    iconImage: '/service icons/Revitalization & Healthy Aging.png',
+    heroImage: '/hero-revitalization.png',
     description: 'Stem cell therapy, beauty IV therapy, immune system therapy, and comprehensive anti-aging programs for optimal vitality.',
     content: (
       <div className="space-y-8">
@@ -742,7 +750,8 @@ export const services: Service[] = [
     title: 'Slenderize for Weight Loss',
     subtitle: 'Effective weight management and metabolic optimization',
     icon: Scale,
-    heroImage: '/hero-slenderize.jpg',
+    iconImage: '/service icons/Slenderize for Weight Loss.png',
+    heroImage: '/hero-slenderize.png',
     description: 'Comprehensive weight loss programs including colon hydrotherapy, IV weight loss drips, hypoxia therapy, and customized hormone therapy.',
     content: (
       <div className="space-y-8">
@@ -846,7 +855,7 @@ export const testimonials = [
   {
     name: "Sarah M.",
     service: "Hormone Systemic Therapy",
-    text: "After struggling with hormonal imbalance for years, Montis Wellness helped me find balance. Their comprehensive screening and personalized treatment plan changed my life. I feel like myself again!",
+    text: "After struggling with hormonal imbalance for years, Montis Specialist Center helped me find balance. Their comprehensive screening and personalized treatment plan changed my life. I feel like myself again!",
     rating: 5,
   },
   {
@@ -864,7 +873,7 @@ export const testimonials = [
   {
     name: "Patricia L.",
     service: "Menopause Management",
-    text: "Navigating menopause was challenging until I found Montis Wellness. Their compassionate care and effective treatments made this transition so much easier. Highly recommend their menopause program!",
+    text: "Navigating menopause was challenging until I found Montis Specialist Center. Their compassionate care and effective treatments made this transition so much easier. Highly recommend their menopause program!",
     rating: 5,
   },
   {
@@ -888,7 +897,7 @@ export const testimonials = [
   {
     name: "Lisa Chen",
     service: "Anti-Aging Wellness",
-    text: "The anti-aging program at Montis Wellness is absolutely transformative. From IV therapies to personalized wellness plans, every detail is thoughtfully designed. I look and feel 10 years younger!",
+    text: "The anti-aging program at Montis Specialist Center is absolutely transformative. From IV therapies to personalized wellness plans, every detail is thoughtfully designed. I look and feel 10 years younger!",
     rating: 5,
   },
 ];

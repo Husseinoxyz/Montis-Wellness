@@ -7,6 +7,7 @@ import ServiceDetail from './pages/ServiceDetail';
 import FiveD from './pages/FiveD';
 import Contact from './pages/Contact';
 import Appointment from './pages/Appointment';
+import Blog from './pages/Blog';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/services" element={<Services />} />
         <Route path="/services/:id" element={<ServiceDetail />} />
         <Route path="/5d" element={<FiveD />} />
+        <Route path="/blog" element={<Blog />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/appointment" element={<Appointment />} />
       </Route>

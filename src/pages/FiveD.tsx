@@ -1,12 +1,12 @@
 import { motion } from 'framer-motion';
-import { CheckCircle, Heart, Shield, Zap, Apple, TrendingUp } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
 
 const dimensions = [
   {
     step: '01',
     title: 'Discovery',
     subtitle: 'Assessment & Diagnosis',
-    icon: CheckCircle,
+    iconImage: '/5D icons/Discovery.png',
     description: 'The Discovery phase involves comprehensive diagnostics and root-cause assessment. This forms the foundation of every patient journey.',
     highlights: [
       'Comprehensive health profiling',
@@ -19,7 +19,7 @@ const dimensions = [
     step: '02',
     title: 'Detox',
     subtitle: 'Cleanse & Optimize',
-    icon: Shield,
+    iconImage: '/5D icons/Detox.png',
     description: 'The Detox phase focuses on systemic burden reduction and internal environment optimization, preparing the body for regenerative interventions.',
     highlights: [
       'Systemic burden reduction',
@@ -32,7 +32,7 @@ const dimensions = [
     step: '03',
     title: 'Defence',
     subtitle: 'Support & Strengthen',
-    icon: Heart,
+    iconImage: '/5D icons/Defence.png',
     description: 'Defence focuses on immune support, repair, and resilience. This phase ensures regenerative strategies are supported by a robust internal defence system.',
     highlights: [
       'Immune system optimization',
@@ -45,7 +45,7 @@ const dimensions = [
     step: '04',
     title: 'Dynamic',
     subtitle: 'Activation & Regeneration',
-    icon: Zap,
+    iconImage: '/5D icons/Dynamic.png',
     description: 'Dynamic represents the regenerative activation phase, where targeted interventions support cellular renewal, vitality, and anti-aging outcomes.',
     highlights: [
       'Cellular renewal and restoration',
@@ -58,7 +58,7 @@ const dimensions = [
     step: '05',
     title: 'Dietary',
     subtitle: 'Maintenance & Longevity',
-    icon: Apple,
+    iconImage: '/5D icons/Dietary.png',
     description: 'The Dietary phase ensures regenerative gains are sustained long-term through personalized nutrition, lifestyle optimization, and ongoing support.',
     highlights: [
       'Personalized nutrition strategies',
@@ -70,10 +70,10 @@ const dimensions = [
 ];
 
 const benefits = [
-  { icon: TrendingUp, title: 'Consistent Patient Journeys', description: 'Every patient follows a structured, proven pathway for optimal outcomes.' },
-  { icon: CheckCircle, title: 'Reproducible Clinical Logic', description: 'Medical clarity before intervention ensures responsible and predictable results.' },
-  { icon: Heart, title: 'Alignment & Governance', description: 'Seamless coordination between doctors, teams, and operations across all centers.' },
-  { icon: Zap, title: 'Scalable Excellence', description: 'Deliver regenerative medicine responsibly at scale without compromising standards.' },
+  { iconImage: '/5D icons/Consistent Patient Journeys.png', title: 'Consistent Patient Journeys', description: 'Every patient follows a structured, proven pathway for optimal outcomes.' },
+  { iconImage: '/5D icons/Reproducible Clinical Logic.png', title: 'Reproducible Clinical Logic', description: 'Medical clarity before intervention ensures responsible and predictable results.' },
+  { iconImage: '/5D icons/Alignment & Governance.png', title: 'Alignment & Governance', description: 'Seamless coordination between doctors, teams, and operations across all centers.' },
+  { iconImage: '/5D icons/Scalable Excellence.png', title: 'Scalable Excellence', description: 'Deliver regenerative medicine responsibly at scale without compromising standards.' },
 ];
 
 export default function FiveD() {
@@ -83,7 +83,7 @@ export default function FiveD() {
       <section className="relative py-32 overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/hero-about.jpg"
+            src="/5 D hero.png"
             alt="5D Medical Model"
             className="w-full h-full object-cover"
           />
@@ -202,8 +202,8 @@ export default function FiveD() {
                         className="absolute inset-0 rounded-full blur-3xl opacity-30"
                         style={{ backgroundColor: '#007A59' }}
                       />
-                      <div className="relative w-64 h-64 rounded-full flex items-center justify-center bg-white shadow-2xl border-4" style={{ borderColor: '#CDB06A' }}>
-                        <dimension.icon className="w-32 h-32" style={{ color: '#007A59' }} strokeWidth={1} />
+                      <div className="relative w-72 h-72 rounded-full flex items-center justify-center overflow-hidden bg-white shadow-2xl border-4" style={{ borderColor: '#CDB06A' }}>
+                        <img src={dimension.iconImage} alt={dimension.title} className="w-full h-full object-cover" />
                       </div>
                     </motion.div>
                   </div>
@@ -242,12 +242,7 @@ export default function FiveD() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="bg-[#F6F6F2] rounded-2xl p-8 hover:shadow-lg transition-shadow"
               >
-                <div
-                  className="w-14 h-14 rounded-xl flex items-center justify-center mb-6"
-                  style={{ backgroundColor: 'rgba(0, 122, 89, 0.1)' }}
-                >
-                  <benefit.icon className="w-7 h-7" style={{ color: '#007A59' }} />
-                </div>
+                <img src={benefit.iconImage} alt={benefit.title} className="w-36 h-36 object-contain mb-6" />
                 <h3 className="text-lg font-semibold text-gray-900 mb-3">
                   {benefit.title}
                 </h3>

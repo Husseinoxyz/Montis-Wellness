@@ -26,8 +26,8 @@ export default function Contact() {
       <section className="relative py-32 overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/hero-contact.jpg"
-            alt="Montis Wellness Contact"
+            src="/hero-contact.png"
+            alt="Montis Specialist Center Contact"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-transparent" />

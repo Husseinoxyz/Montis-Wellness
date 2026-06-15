@@ -7,6 +7,7 @@ const navLinks = [
   { label: 'About', path: '/about' },
   { label: 'Services', path: '/services' },
   { label: '5D Model', path: '/5d' },
+  { label: 'Blog', path: '/blog' },
   { label: 'Contact', path: '/contact' },
   { label: 'Appointment', path: '/appointment' },
 ];
@@ -39,12 +40,14 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2">
-            <span className="text-2xl font-bold tracking-tight" style={{ color: '#007A59' }}>
-              Montis
-            </span>
-            <span className="text-2xl font-light tracking-tight text-gray-800">
-              Wellness
+          <Link to="/" className="flex items-center gap-3">
+            <img
+              src="/logo.png"
+              alt="Montis Specialist Center"
+              className="h-16 w-auto object-contain"
+            />
+            <span className="text-xl font-semibold tracking-tight text-gray-900">
+              Montis Specialist Center
             </span>
           </Link>
 

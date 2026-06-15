@@ -34,7 +34,7 @@ export default function Appointment() {
       <section className="relative py-32 overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/hero-appointment.jpg"
+            src="/hero-appointment.png"
             alt="Book Appointment"
             className="w-full h-full object-cover"
           />
@@ -78,7 +78,7 @@ export default function Appointment() {
                 Appointment Requested!
               </h2>
               <p className="text-gray-600 text-lg mb-8 max-w-lg mx-auto">
-                Thank you for booking with Montis Wellness. Our team will review your request and confirm your appointment within 2 hours via email or phone.
+                Thank you for booking with Montis Specialist Center. Our team will review your request and confirm your appointment within 2 hours via email or phone.
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <Link

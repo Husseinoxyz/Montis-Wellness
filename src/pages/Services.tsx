@@ -10,8 +10,8 @@ export default function Services() {
       <section className="relative py-32 overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/hero-services.jpg"
-            alt="Montis Wellness Services"
+            src="/hero-services.png"
+            alt="Montis Specialist Center Services"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-transparent" />
@@ -59,11 +59,6 @@ export default function Services() {
                       alt={service.title}
                       className="w-full h-64 lg:h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
-                    <div className="absolute top-4 left-4">
-                      <div className="w-12 h-12 rounded-xl bg-white/90 backdrop-blur-sm flex items-center justify-center">
-                        <service.icon className="w-6 h-6" style={{ color: '#007A59' }} />
-                      </div>
-                    </div>
                   </div>
                   <div className="lg:w-3/5 p-8 flex flex-col justify-center">
                     <h3 className="text-2xl font-semibold text-gray-900 mb-2 group-hover:text-[#007A59] transition-colors">
