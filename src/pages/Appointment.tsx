@@ -151,11 +151,12 @@ export default function Appointment() {
                           onChange={(e) => setFormData({ ...formData, service: e.target.value })}
                           className="sr-only"
                         />
-                        <div
-                          className="w-12 h-12 rounded-xl flex items-center justify-center shrink-0"
-                          style={{ backgroundColor: 'rgba(0, 122, 89, 0.1)' }}
-                        >
-                          <service.icon className="w-6 h-6" style={{ color: '#007A59' }} />
+                        <div className="w-24 h-24 rounded-2xl overflow-hidden shrink-0">
+                          <img
+                            src={service.iconImage}
+                            alt={service.title}
+                            className="w-full h-full object-cover"
+                          />
                         </div>
                         <div>
                           <p className="font-medium text-gray-900">{service.title}</p>
