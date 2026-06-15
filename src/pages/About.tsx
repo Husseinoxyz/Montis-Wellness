@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Award, Users, Clock, Heart, Target, Shield, TrendingUp } from 'lucide-react';
+import { Award, Clock, Heart, Shield, TrendingUp } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { team } from '../data/team';
 
