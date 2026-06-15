@@ -135,7 +135,7 @@ export default function ServiceDetail() {
                 </Link>
 
                 <a
-                  href="tel:+15550142200"
+                  href="tel:+60102648685"
                   className="block w-full text-center px-6 py-4 rounded-full font-medium border-2 transition-all hover:scale-105"
                   style={{ borderColor: '#007A59', color: '#007A59' }}
                 >

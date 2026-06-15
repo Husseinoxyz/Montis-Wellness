@@ -903,10 +903,10 @@ export const testimonials = [
 ];
 
 export const contactInfo = {
-  address: "127 Wellness Boulevard, Suite 300, Medical District",
-  phone: "+1 (555) 014-2200",
-  email: "hello@montiswellness.com",
-  whatsapp: "+1 (555) 014-2201",
+  address: "Lot 1.02, Menara BRDB, BSC South Tower, 285, Jalan Maarof, Bangsar, 59000 Kuala Lumpur",
+  phone: "+60 10-264 8685",
+  email: "Oxyz.rabten@gmail.com",
+  whatsapp: "+60 10-264 8685",
   hours: {
     monday: "08:00 - 20:00",
     tuesday: "08:00 - 20:00",

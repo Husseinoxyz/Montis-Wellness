@@ -67,7 +67,7 @@ export default function Navbar() {
               </Link>
             ))}
             <a
-              href="tel:+15550142200"
+              href="tel:+60102648685"
               className="flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-medium text-white transition-all hover:scale-105"
               style={{ backgroundColor: '#007A59' }}
             >
@@ -104,7 +104,7 @@ export default function Navbar() {
               </Link>
             ))}
             <a
-              href="tel:+15550142200"
+              href="tel:+60102648685"
               className="flex items-center justify-center gap-2 px-4 py-3 rounded-full text-sm font-medium text-white mt-4"
               style={{ backgroundColor: '#007A59' }}
             >

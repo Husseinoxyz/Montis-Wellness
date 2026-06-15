@@ -80,18 +80,24 @@ export default function Footer() {
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-[#CDB06A] shrink-0 mt-0.5" />
-                <span className="text-gray-400 text-sm">127 Wellness Boulevard, Suite 300, Medical District</span>
+                <span className="text-gray-400 text-sm">Lot 1.02, Menara BRDB, BSC South Tower, 285, Jalan Maarof, Bangsar, 59000 Kuala Lumpur</span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-[#CDB06A] shrink-0" />
-                <a href="tel:+15550142200" className="text-gray-400 text-sm hover:text-white transition-colors">
-                  +1 (555) 014-2200
+                <a href="tel:+60102648685" className="text-gray-400 text-sm hover:text-white transition-colors">
+                  +60 10-264 8685
                 </a>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-[#CDB06A] shrink-0" />
-                <a href="mailto:hello@montiswellness.com" className="text-gray-400 text-sm hover:text-white transition-colors">
-                  hello@montiswellness.com
+                <a href="mailto:Oxyz.rabten@gmail.com" className="text-gray-400 text-sm hover:text-white transition-colors">
+                  Oxyz.rabten@gmail.com
+                </a>
+              </li>
+              <li className="flex items-center gap-3">
+                <Phone className="w-5 h-5 text-[#CDB06A] shrink-0" />
+                <a href="https://wa.me/60102648685" className="text-gray-400 text-sm hover:text-white transition-colors">
+                  WhatsApp: +60 10-264 8685
                 </a>
               </li>
               <li className="flex items-start gap-3">

@@ -60,7 +60,7 @@ export default function Contact() {
             {[
               { icon: MapPin, title: 'Address', content: contactInfo.address, action: null },
               { icon: Phone, title: 'Phone', content: contactInfo.phone, action: `tel:${contactInfo.phone}` },
-              { icon: Mail, title: 'Email', content: contactInfo.email, action: `mailto:${contactInfo.email}` },
+              { icon: Mail, title: 'Email', content: contactInfo.email, action: contactInfo.email.includes('@') ? `mailto:${contactInfo.email}` : null },
               { icon: MessageCircle, title: 'WhatsApp', content: contactInfo.whatsapp, action: `https://wa.me/${contactInfo.whatsapp.replace(/\D/g, '')}` },
             ].map((item, index) => (
               <motion.div
