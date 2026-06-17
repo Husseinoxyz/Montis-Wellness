@@ -64,9 +64,11 @@ export default function ServiceDetail() {
             </Link>
 
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-14 h-14 rounded-xl bg-white/10 backdrop-blur-sm flex items-center justify-center">
-                <service.icon className="w-7 h-7 text-[#CDB06A]" />
-              </div>
+              <img
+                src={service.iconImage}
+                alt={service.title}
+                className="w-20 h-20 object-cover shrink-0"
+              />
               <span className="text-sm font-medium tracking-wider uppercase text-[#CDB06A]">
                 {service.subtitle}
               </span>

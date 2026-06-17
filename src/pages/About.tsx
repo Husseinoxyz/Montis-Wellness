@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { Award, Clock, Heart, Shield, TrendingUp } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { team } from '../data/team';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '../components/ui/accordion';
 
 const values = [
   {
@@ -36,6 +37,49 @@ const values = [
   },
 ];
 
+const faqs = [
+  {
+    question: 'What services does Montis offer?',
+    answer:
+      'Montis provides health assessments, detox therapies, defence programs, dynamic treatments, dietary support, and specialized programs for hormone balance, heart recovery, weight loss, digestive health, revitalization, and healthy aging.',
+  },
+  {
+    question: 'What is Resonance Scanning at Montis?',
+    answer:
+      'Resonance Scanning is a non-invasive diagnostic tool used to assess energetic imbalances in the body and help detect potential health concerns early.',
+  },
+  {
+    question: 'What does the Comprehensive Blood Test include?',
+    answer:
+      'It evaluates multiple blood parameters to provide insight into organ function, nutritional status, inflammation patterns, and potential infections as part of an overall health review.',
+  },
+  {
+    question: 'What is the purpose of the Food Allergy & Intolerance Test?',
+    answer:
+      'This test helps identify foods that may trigger adverse reactions, allowing treatment plans and nutrition guidance to be tailored more accurately.',
+  },
+  {
+    question: 'Why are heavy metals, minerals, and toxicity tests important?',
+    answer:
+      'These tests identify toxic exposure and nutrient imbalances that may be disrupting the body’s natural regulatory systems and contributing to chronic symptoms.',
+  },
+  {
+    question: 'What is Colon Hydrotherapy at Montis?',
+    answer:
+      'Colon Hydrotherapy is a gentle detoxification procedure that uses warm water to help flush waste and toxins from the colon while supporting digestive health.',
+  },
+  {
+    question: 'How does Chelation Therapy help?',
+    answer:
+      'Chelation Therapy uses binding agents to support the removal of heavy metals from the body, helping reduce toxic load where medically appropriate.',
+  },
+  {
+    question: 'What role does Oxygen Therapy play in detoxification?',
+    answer:
+      'Oxygen Therapy supports cellular metabolism and can assist the body’s natural detoxification and recovery processes by improving oxygen availability.',
+  },
+];
+
 export default function About() {
   return (
     <div className="min-h-screen">
@@ -64,7 +108,7 @@ export default function About() {
               Montis <span style={{ color: '#CDB06A' }}>Specialist Center</span>
             </h1>
             <p className="text-xl text-gray-200 leading-relaxed">
-              A modern therapy and aesthetics studio built on clarity, comfort, and consistency. We blend hands-on care with thoughtful technology.
+              Our goal is not only adding years to life, but more life to years. Montis is your one-stop destination for integrative and regenerative medicine.
             </p>
           </motion.div>
         </div>
@@ -84,19 +128,22 @@ export default function About() {
                 Our <span style={{ color: '#007A59' }}>Mission</span>
               </h2>
               <p className="text-gray-600 text-lg leading-relaxed mb-6">
-                At Montis Specialist Center, we believe that optimal health is not just the absence of disease, but a state of complete physical, mental, and social well-being. Our mission is to empower individuals to take control of their health through personalized, science-backed wellness solutions.
+                Recognized as the home of Biological Medicine in Southeast Asia, Montis provides a comprehensive spectrum of innovative therapies rooted in the principles of Biological Medicine. We begin with the understanding that disease and chronic health issues are often the result of deeper underlying imbalances.
               </p>
               <p className="text-gray-600 text-lg leading-relaxed mb-6">
-                Founded by a team of international medical professionals, we combine cutting-edge diagnostic technology with time-tested therapeutic approaches to deliver results that matter. From hormone balance to cardiovascular health, digestive wellness to anti-aging—every program is designed with your unique biology in mind.
+                Rather than masking symptoms, we focus on treating root causes and empowering the body to heal and restore itself naturally. When wellness is disrupted by toxins, poor nutrition, stress, genetics, or lifestyle habits, our goal is to guide patients back toward long-term vitality and well-being.
+              </p>
+              <p className="text-gray-600 text-lg leading-relaxed mb-6">
+                Driven by a mission to help individuals live healthier lives and reverse the signs of aging, Montis was established with more than 30 years of medical experience in Biological Medicine behind its expert team.
               </p>
               <div className="grid grid-cols-2 gap-6 mt-8">
                 <div className="text-center">
-                  <p className="text-4xl font-bold" style={{ color: '#007A59' }}>15K+</p>
-                  <p className="text-gray-500 mt-1">Happy Clients</p>
+                  <p className="text-4xl font-bold" style={{ color: '#007A59' }}>30+</p>
+                  <p className="text-gray-500 mt-1">Years of Medical Experience</p>
                 </div>
                 <div className="text-center">
-                  <p className="text-4xl font-bold" style={{ color: '#007A59' }}>8+</p>
-                  <p className="text-gray-500 mt-1">Years of Excellence</p>
+                  <p className="text-4xl font-bold" style={{ color: '#007A59' }}>12+</p>
+                  <p className="text-gray-500 mt-1">Focused Health Programs</p>
                 </div>
               </div>
             </motion.div>
@@ -115,6 +162,50 @@ export default function About() {
               />
             </motion.div>
           </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-24 bg-white">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+          >
+            <span className="text-sm font-medium tracking-wider uppercase" style={{ color: '#CDB06A' }}>
+              FAQ
+            </span>
+            <h2 className="text-4xl md:text-5xl font-bold mt-3 mb-6 text-gray-900">
+              Common <span style={{ color: '#007A59' }}>Questions</span>
+            </h2>
+            <p className="text-gray-600 max-w-2xl mx-auto text-lg">
+              A quick introduction to how Montis approaches diagnostics, detoxification, regenerative support, and long-term wellness planning.
+            </p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="rounded-3xl border border-gray-200 bg-[#F6F6F2] px-6 py-4 md:px-10 md:py-6"
+          >
+            <Accordion type="single" collapsible className="w-full">
+              {faqs.map((faq, index) => (
+                <AccordionItem key={index} value={`faq-${index}`} className="border-gray-200">
+                  <AccordionTrigger className="text-base md:text-lg font-semibold text-gray-900 hover:no-underline">
+                    {faq.question}
+                  </AccordionTrigger>
+                  <AccordionContent className="text-gray-600 text-base leading-relaxed">
+                    {faq.answer}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </motion.div>
         </div>
       </section>
 
